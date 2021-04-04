@@ -16,7 +16,7 @@ void imprimirPunto(Punto p)
 
 float distancia(Punto p1, Punto p2){
 	float distancia;
-	distancia=sqrt((p2.x-p1.x)^2+(p2.y-p1.y)^2);
+	distancia=sqrt((p2.x-p1.x)*(p2.x-p1.x)+(p2.y-p1.y)*(p2.y-p1.y));
 	return distancia;
 }
 

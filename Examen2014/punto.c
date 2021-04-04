@@ -23,7 +23,6 @@ float distancia(Punto p1, Punto p2) {
 void trasladarXY(Punto *p1, Punto *p2, int x, int y) {
 
 	p1->x += x;
-
 	p2->x += x;
 	p1->y += y;
 	p2->y += y;

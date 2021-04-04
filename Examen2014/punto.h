@@ -14,6 +14,6 @@ typedef struct {
 
 void imprimirPunto(Punto p);
 float distancia(Punto p1, Punto p2);
-void trasladarXY(Punto p1, Punto p2, int x, int y);
+void trasladarXY(Punto *p1, Punto *p2, int x, int y);
 
 #endif /* PUNTO_H_ */

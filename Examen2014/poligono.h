@@ -8,7 +8,7 @@
 #ifndef POLIGONO_H_
 #define POLIGONO_H_
 
-#include "punto.h";
+#include "punto.h"
 
 typedef struct {
 	int numVertices;

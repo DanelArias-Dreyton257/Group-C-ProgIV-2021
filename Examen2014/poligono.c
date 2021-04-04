@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include "punto.h"
 #include "poligono.h"
+#include <stdlib.h>;
 /**
  * Imprime el poligono mostrndo los diferentes puntos de este
  * @param Poligono a imprimir
@@ -32,14 +33,33 @@ float perimetro(Poligono poli) {
 	return per;
 }
 
-void liberar(Poligono poli) {
-	//TODO
+void liberar(Poligono *poli) {
+	//Libera los vetices
+	for (int i = 0; i < poli->numVertices; i++) {
+		free((poli->vertices) + i);
+	}
+	//Libera el poligono en si
+	free(poli);
 }
 
-void anadirVertice(Poligono poli, Punto p) {
-	//TODO
+void anadirVertice(Poligono *poli, Punto p) {
+	poli->numVertices++; //aumenta el numero de vertices
+
+	//Realloc para que haya espacio
+	Punto *verticesRealloc = realloc(poli->vertices,
+			sizeof(Punto) * poli->numVertices);
+	poli->vertices = verticesRealloc;
+
+	//Guarda el punto
+	poli->vertices[poli->numVertices - 1] = p;
+
 }
 
-void copiarPoligono(Poligono poli1, Poligono poli2) {
-	//TODO
+void copiarPoligono(Poligono *poli1, Poligono *poli2) {
+	poli1->numVertices = poli2->numVertices;
+
+	poli1->vertices = malloc(sizeof(Punto) * poli2->numVertices);
+	for (int i = 0; i < poli2->numVertices; i++) {
+		poli1->vertices[i] = poli2->vertices[i];
+	}
 }

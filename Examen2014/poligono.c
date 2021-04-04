@@ -7,6 +7,7 @@
  */
 #include <stdio.h>
 #include "punto.h"
+#include "poligono.h"
 /**
  * Imprime el poligono mostrndo los diferentes puntos de este
  * @param Poligono a imprimir

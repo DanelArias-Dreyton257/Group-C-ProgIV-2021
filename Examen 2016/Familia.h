@@ -2,7 +2,7 @@
  * Familia.h
  *
  *  Created on: 14 may. 2021
- *      Author: danel
+ *      Author: danel y jon ander
  */
 
 #ifndef FAMILIA_H_

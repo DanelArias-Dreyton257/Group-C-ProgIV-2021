@@ -2,7 +2,7 @@
  * Familia.cpp
  *
  *  Created on: 14 may. 2021
- *      Author: danel
+ *      Author: danel y jon ander
  */
 
 #include "Familia.h"

@@ -13,7 +13,7 @@ ArbolFamilias::ArbolFamilias() {
 }
 
 ArbolFamilias::~ArbolFamilias() {
-	delete familias;
+	delete[] familias;
 }
 void ArbolFamilias::anadirFamilia(Familia *f) {
 	familias[numFamilias] = f;

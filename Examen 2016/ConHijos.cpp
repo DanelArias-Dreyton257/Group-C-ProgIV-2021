@@ -23,7 +23,7 @@ ConHijos::ConHijos(Miembro *conyugeH, Miembro *conyugeM) :
 }
 
 ConHijos::~ConHijos() {
-	delete hijos;
+	delete[] hijos;
 }
 
 int ConHijos::getNumHijos() const {
@@ -47,7 +47,7 @@ void ConHijos::addHijo(Miembro *hijo) {
 
 	hijosCopy[numHijos] = hijo;
 
-	delete hijos;
+	delete[] hijos;
 
 	hijos = hijosCopy;
 	numHijos++;

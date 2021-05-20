@@ -28,8 +28,6 @@ Miembro* Familia::getConyugeM() const {
 }
 
 Familia::~Familia() {
-	delete conyugeH;
-	delete conyugeM;
 }
 
 char* Familia::getNombre() {

@@ -31,8 +31,8 @@ Familia::~Familia() {
 }
 
 char* Familia::getNombre() {
-	char *ApH = strchr(conyugeH->getNombre(), ' ');
-	char *ApM = strchr(conyugeM->getNombre(), ' ');
+	char *ApH = strchr(conyugeH->getNombre(), ' ') + 1 ;
+	char *ApM = strchr(conyugeM->getNombre(), ' ') + 1 ;
 	char *strFinal = new char[strlen(ApH) + 3 + strlen(ApM) + 1];
 	strcpy(strFinal, ApH);
 	strcat(strFinal, " - ");
